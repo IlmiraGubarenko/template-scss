@@ -1,0 +1,57 @@
+.text-bold{
+  font-weight: $fontBold;
+}
+
+.flex-container{
+  display: flex;
+}
+
+.align-item-end{
+  align-items: flex-end;
+}
+
+black-bg{
+  background-color: #333;
+}
+.grey-bg{
+  background-color: #bababa;
+}
+.dark-grey-bg{
+  background-color: #979797;
+}
+.light-grey-bg{
+  background-color: #e3e3e3;
+}
+.xs-light-grey-bg{
+  background-color: #f5f5f5;
+}
+.orange-bg{
+  background-color: #f58220;
+}
+.orange-light-bg{
+  background-color: #ffa200;
+}
+.green-bg{
+  background-color: #04ae00;
+}
+.light-green-bg{
+  background-color: #74b67a;
+}
+.xs-light-green-bg{
+  background-color: #96cc9b;;
+}
+.red-bg{
+  background-color: #ff0000;
+}
+.pink-bg{
+  background-color: #de5252;
+}
+.light-pink-bg{
+  background-color: #ec7171;
+}
+.blue-bg{
+  background-color: #56819f;
+}
+.light-blue-bg{
+  background-color: #80bfca;
+}

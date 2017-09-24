@@ -1,0 +1,224 @@
+// Component
+
+// title
+%title{
+  color: $titleColor;
+  font-size: $titleFontSize;
+  font-weight: $fontBold;
+}
+
+.page-title{
+  @extend %title;
+  text-transform: uppercase;
+}
+
+.section-title{
+  @extend %title;
+}
+
+// links
+.link{
+  font-size: $linkFontSizeDefault;
+  color: $linkColor;
+
+  &.large-link{
+    font-size: $linkLargeFont;
+  }
+
+  &:hover{
+    color: $linkHoverColor;
+  }
+}
+
+// buttons
+.btn{
+  padding: 12px 22px;
+  font-size: $btnFontSize;
+  color: $btnDefaultColor;
+  border-radius: 2px;
+  display: inline-block;
+
+  &.btn-default{
+    background-color: $btnDefaultBg;
+
+    &:hover{
+      background-color: $btnDefaultBgHover;
+    }
+  }
+
+  &.btn-action{
+    background-color: $btnActionBg;
+
+    &:hover{
+      background-color: $btnActionBgHover;
+    }
+  }
+
+  &.btn-disabled{
+    background-color: $btnDisabledBg;
+    cursor: not-allowed;
+
+    &:hover{
+      background-color: $btnDisabledBgHover;
+    }
+  }
+}
+
+// table
+.table {
+  border-collapse: collapse;
+  font-size: $tableFontSize;
+
+  tbody {
+    tr {
+
+      &:hover {
+        background-color: $tableTrHover;
+        cursor: pointer;
+      }
+    }
+  }
+    tr {
+
+      th {
+        padding: 30px 18px;
+        color: $grey;
+      }
+
+      td {
+        border-top: 1px solid $lightGrey;
+        padding: 18px;
+
+        &.td-title {
+          font-size: 16px;
+          color: $grey;
+        }
+      }
+    }
+    .table-sort {
+      color: $grey;
+      padding: 8px 10px;
+      margin: -8px -10px;
+      border-radius: 2px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $xsLightGrey;
+        color: $black;
+      }
+    }
+}
+
+// color tab
+.color-tab{
+  padding: 12px 19px;
+  display: flex;
+  align-items: center;
+  font-size: $tabFontSize;
+  color: $tabColor;
+  cursor: pointer;
+  border-radius: 2px;
+  
+  &:hover{
+    background-color: $tabBgHover;
+  }
+
+  .tab-circle{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+  .tab-text{
+    padding-left: 13px;
+  }
+  &.color-tab-action{
+    background-color: $tabBgAction;
+  }
+}
+
+// input
+.form-control{
+  border: 1px solid $inputColorBorder;
+  border-radius: 2px;
+  color: $inputColor;
+
+  &:hover{
+    border-color: $inputColorBorderHover;
+    cursor: pointer;
+    color: $inputColorHover;
+  }
+
+  &:focus{
+    border-color: $inputColorBorderFocus;
+    cursor: pointer;
+    color: $inputColorFocus;
+  }
+
+  &.invalid{
+    border-color: $inputColorBorderInvalid;
+  }
+
+  &.disabled{
+    background-color: $inputColorBgDesabled;
+    border-color: $inputColorBorderDesabled;
+    cursor: not-allowed;
+
+    &:hover{
+      @extend .disabled;
+    }
+  }
+}
+
+textarea {
+  font-size: $textareaFontSize;
+  padding: 17px;
+}
+
+input[type="text"] {
+  font-size: $inputFontSize;
+  padding: 13px 16px;
+}
+
+input[type="password"] {
+  font-size: $inputFontSize;
+  padding: 13px 14px;
+}
+
+input[disabled] {
+  background-color: $inputColorBgDesabled;
+  border-color: $inputColorBorderDesabled;
+  cursor: not-allowed;
+}
+
+// notification
+.notification{
+  color: $notificationColor;
+  font-size: $notificationFontSize;
+  padding: 12px 14px 12px 22px;
+  display: inline-block;
+  cursor: pointer;
+
+  &.positive{
+    background-color: $notificationColorBgPositive;
+
+    &:hover{
+      background-color: $notificationColorBgPositiveHover;
+    }
+  }
+
+  &.negative{
+    background-color: $notificationColorBgNegative;
+  }
+
+  &:hover{
+    background-color: $notificationColorBgNegativeHover;
+  }
+
+}
+
+
+
+
+
+
