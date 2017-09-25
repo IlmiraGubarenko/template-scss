@@ -2,14 +2,43 @@
   font-weight: $fontBold;
 }
 
+// class position fixed
+.fixed-to-top{
+  position: fixed;
+  z-index: 99;
+  top: 0;
+}
+
+// class flex
 .flex-container{
   display: flex;
 }
 
-.align-item-end{
+.justify-content-end{
+  justify-content: flex-end;
+}
+
+.justify-content-center{
+  justify-content: center;
+}
+
+.justify-content-sb{
+  justify-content: space-between;
+}
+
+.justify-content-sa{
+  justify-content: space-around;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.align-items-end{
   align-items: flex-end;
 }
 
+// class background-color
 black-bg{
   background-color: #333;
 }

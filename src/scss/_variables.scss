@@ -25,6 +25,9 @@ $pink: #de5252;
 $lightPink: #ec7171;
 $blue: #56819f;
 
+// Default padding
+$defaultIndent: 18px;
+
 // Component var
 
 // Link component
@@ -36,6 +39,7 @@ $linkLargeFont: 16px;
 // Title component
 $titleColor: #a6a6a6;
 $titleFontSize: 16px;
+$smallTitleFontSize: 14px;
 
 // Btn component
 $btnFontSize: 18px;
@@ -77,6 +81,17 @@ $notificationColorBgNegative: $lightPink;
 $notificationColorBgNegativeHover: $pink;
 $notificationColor: #fff;
 $notificationFontSize: 14px;
+
+// Header component
+$userBalanceFontSize: 20px;
+$userBalanceColor: #9c9c9c;
+$userLoginFontSize: 13px;
+$userLoginColor: $blue;
+
+// Acide component
+$acideBg: #191919;
+$acideWidth: 188px;
+
 
 
 
