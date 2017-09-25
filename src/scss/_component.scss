@@ -20,8 +20,6 @@
   @extend %title;
 }
 
-
-
 // links
 .link{
   font-size: $linkFontSizeDefault;
@@ -43,6 +41,10 @@
   color: $btnDefaultColor;
   border-radius: 2px;
   display: inline-block;
+
+  & + .btn{
+    margin-left: $defaultIndent;
+  }
 
   &.btn-default{
     background-color: $btnDefaultBg;
@@ -75,8 +77,18 @@
   border-collapse: collapse;
   font-size: $tableFontSize;
 
+  &.full-width{
+    width: 100%;
+  }
+
   tbody {
     tr {
+
+      &:last-child{
+        td{
+          border-bottom: 1px solid $lightGrey;
+        }
+      }
 
       &:hover {
         background-color: $tableTrHover;
@@ -89,6 +101,7 @@
       th {
         padding: 30px 18px;
         color: $grey;
+        text-align: left;
       }
 
       td {
@@ -102,6 +115,7 @@
       }
     }
     .table-sort {
+      display: inline-block;
       color: $grey;
       padding: 8px 10px;
       margin: -8px -10px;
@@ -113,6 +127,35 @@
         color: $black;
       }
     }
+}
+
+// pagination
+%activePaginationLink{
+  background-color: $xsLightGrey;
+  color: $darkGrey;
+  border-radius: 2px;
+}
+
+.pagination{
+
+  li{
+    display: inline-block;
+
+    &.active{
+      a{
+        @extend %activePaginationLink;
+      }
+    }
+
+    a{
+      display: inline-block;
+      padding: $defaultIndent;
+
+      &:hover{
+        @extend %activePaginationLink;
+      }
+    }
+  }
 }
 
 // color tab
@@ -179,6 +222,7 @@
 textarea {
   font-size: $textareaFontSize;
   padding: 17px;
+  resize: none;
 }
 
 input[type="text"] {
@@ -228,6 +272,15 @@ input[disabled] {
   padding: $defaultIndent;
 }
 
+.container-sm{
+  max-width: 684px;
+  margin: 0 auto;
+}
+
+.container-guide{
+  background-color: #fff;
+}
+
 // header
 .header{
   background-color: #fff;
@@ -240,6 +293,8 @@ input[disabled] {
     .user-controls-item{
       padding: 20px;
       border-left: 1px solid $lightGrey;
+      min-height: 20px;
+      box-sizing: content-box;
 
       &.user-balance{
         font-weight: $fontRegular;
@@ -256,12 +311,19 @@ input[disabled] {
 }
 
 // acide
+%activeLink{
+  border-left-color: $orange;
+  background-color: #282828;
+  color: #fff;
+}
+
 .aside{
   background-color: $acideBg;
   width: $acideWidth;
   height: 100vh;
   left: 0;
   z-index: 100;
+  overflow-y: auto;
 
   .menu-control{
     padding: $defaultIndent;
@@ -289,24 +351,26 @@ input[disabled] {
       li{
         color: $darkGrey;
 
+        &.active{
+          a{
+            @extend %activeLink;
+          }
+        }
         a{
           display: block;
           padding: 14px;
           border-left: 4px solid transparent;
           
           &:hover{
-            border-left-color: $orange;
-            background-color: #282828;
-            color: #fff;
+            @extend %activeLink;
           }
-
         }
       }
     }
   }
 
   .your-manager{
-    padding: 27px $defaultIndent 0;
+    padding: 27px $defaultIndent;
     border-top: 1px solid $darkGrey;
 
     .manager-info {
@@ -340,6 +404,33 @@ input[disabled] {
 
   }
 }
+
+// content wrapper
+.content-wrapper{
+  padding: $defaultIndent;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+  
+.panel{
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+  & + .panel{
+    margin-top: $defaultIndent;
+  }
+
+  .panel-header{
+    border-bottom: 1px solid $lightGrey;
+    padding: $defaultIndent;
+  }
+
+  .panel-body{
+    padding: $defaultIndent;
+  }
+}
+
+
 
 
 
