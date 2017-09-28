@@ -266,7 +266,9 @@ black-bg {
   border: 1px solid #e3e3e3;
   -webkit-border-radius: 2px;
           border-radius: 2px;
-  color: #a6a6a6; }
+  color: #a6a6a6;
+  font-size: 14px;
+  padding: 13px 16px; }
   .form-control:hover {
     border-color: #b1b1b1;
     cursor: pointer;
@@ -286,14 +288,6 @@ textarea {
   font-size: 12px;
   padding: 17px;
   resize: none; }
-
-input[type="text"] {
-  font-size: 14px;
-  padding: 13px 16px; }
-
-input[type="password"] {
-  font-size: 14px;
-  padding: 13px 14px; }
 
 input[disabled] {
   background-color: #e3e3e3;
@@ -321,6 +315,9 @@ input[disabled] {
 .container-sm {
   max-width: 684px;
   margin: 0 auto; }
+
+.row {
+  margin: 0 -18px; }
 
 .container-guide {
   background-color: #fff; }
@@ -373,6 +370,12 @@ input[disabled] {
       display: block;
       padding: 14px;
       border-left: 4px solid transparent; }
+      .aside .aside-menu ul li a span {
+        display: inline-block;
+        width: 15px; }
+      .aside .aside-menu ul li a .icon {
+        font-size: 17px;
+        margin-right: 15px; }
   .aside .your-manager {
     padding: 27px 18px;
     border-top: 1px solid #979797; }
@@ -410,7 +413,23 @@ input[disabled] {
     border-bottom: 1px solid #e3e3e3;
     padding: 18px; }
   .panel .panel-body {
-    padding: 18px; }
+    padding: 0 18px; }
+  .panel .panel-form {
+    padding: 40px 0;
+    border-bottom: 1px solid #e3e3e3; }
+    .panel .panel-form form {
+      width: 455px;
+      display: inline-block; }
+      .panel .panel-form form .form-control {
+        width: 310px; }
+      .panel .panel-form form .label-group + .label-group {
+        margin-top: 15px; }
+      .panel .panel-form form .label-group label {
+        font-weight: 700;
+        font-size: 16px;
+        color: #a6a6a6; }
+  .panel .panel-footer {
+    padding: 30px 0; }
 
 .guide-wrap {
   padding: 20px; }
@@ -421,6 +440,9 @@ input[disabled] {
 main {
   padding-left: 188px;
   padding-top: 60px; }
+
+.links .panel-body {
+  padding: 25px 0; }
 
 .links .table {
   margin: 18px 0; }

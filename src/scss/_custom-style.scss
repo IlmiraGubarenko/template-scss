@@ -14,6 +14,13 @@ main{
   padding-top: 60px;
 }
 
-.links .table{
-  margin: $defaultIndent 0;
+.links{
+
+  .panel-body{
+    padding: 25px 0;
+  }
+
+  .table {
+    margin: $defaultIndent 0;
+  }
 }
