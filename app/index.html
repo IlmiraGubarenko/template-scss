@@ -113,6 +113,21 @@
                         </ul>
                     </div>
                     <div class="chart-wrap">
+                        <div class="chart-title">Earnings chart</div>
+                        <div class="tabs flex-container justify-content-center">
+                            <div class="color-tab color-tab-action flex-container">
+                                <span class="tab-circle light-blue-bg"></span>
+                                <span class="tab-text">Signups</span>
+                            </div>
+                            <div class="color-tab flex-container">
+                                <span class="tab-circle orange-tab-bg"></span>
+                                <span class="tab-text">FTD</span>
+                            </div>
+                            <div class="color-tab flex-container">
+                                <span class="tab-circle green-tab-bg"></span>
+                                <span class="tab-text">Earned</span>
+                            </div>
+                        </div>
                         <canvas id="myChart" width="680" height="440"></canvas>
                     </div>
                 </div>
@@ -179,10 +194,57 @@
 </main>
 
 
+<!-- MODAL ADD LINKS -->
+<div class="modal" id="add-links-modal">
+    <div class="modal-header flex-container align-items-center justify-content-sb">
+        <h3 class="page-title">add url</h3>
+        <div class="close"><span class="icon icon-close"></span></div>
+    </div>
+    <div class="modal-body flex-container">
+        <form class="flex-container">
+            <div class="label-group">
+                <label for="user-scheme-name">Scheme name</label>
+                <div class="input-scheme-name">
+                    <input type="text" class="form-control" id="user-scheme-name" placeholder="Name">
+                </div>
+            </div>
+            <div class="label-group">
+                <label for=""></label>
+                <div class="filtres">
+                    <select name="" id=""">
+                        <option value="">one</option>
+                        <option value="">one</option>
+                        <option value="">one</option>
+                        <option value="">one</option>
+                    </select>
+                </div>
+            </div>
+            <div class="label-group">
+                <label for="language">Language</label>
+                <div class="filtres">
+                    <select name="" id="language">
+                        <option value="">one</option>
+                        <option value="">one</option>
+                        <option value="">one</option>
+                        <option value="">one</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <form>
+
+        </form>
+    </div>
+</div>
+
+
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+<script src="js/jquery.bpopup.min.js"></script>
 
 <!-- Init plugins -->
 <script src="js/init.js"></script>

@@ -72,9 +72,37 @@
   }
 }
 
+// color tab
+.color-tab{
+  padding: 12px 19px;
+  display: flex;
+  align-items: center;
+  font-size: $tabFontSize;
+  color: $tabColor;
+  cursor: pointer;
+  border-radius: 2px;
+
+  &:hover{
+    background-color: $tabBgHover;
+  }
+
+  .tab-circle{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+  .tab-text{
+    padding-left: 13px;
+  }
+  &.color-tab-action{
+    background-color: $tabBgAction;
+  }
+}
+
 // list
 .list-block {
-  padding: 40px 0 75px 0;
+  padding: 20px 0 75px 0;
 
   .list {
     width: 50%;
@@ -98,6 +126,26 @@
     }
   }
 }
+
+// chart
+.chart-wrap{
+
+  .chart-title{
+    @extend %title;
+  }
+
+  .tabs{
+    margin: 40px 0 70px 0;
+
+    .color-tab{
+      & + .color-tab{
+        margin-left: 40px;
+      }
+
+    }
+  }
+}
+
 // table
 .table {
   border-collapse: collapse;
@@ -184,34 +232,6 @@
   }
 }
 
-// color tab
-.color-tab{
-  padding: 12px 19px;
-  display: flex;
-  align-items: center;
-  font-size: $tabFontSize;
-  color: $tabColor;
-  cursor: pointer;
-  border-radius: 2px;
-  
-  &:hover{
-    background-color: $tabBgHover;
-  }
-
-  .tab-circle{
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-  }
-  .tab-text{
-    padding-left: 13px;
-  }
-  &.color-tab-action{
-    background-color: $tabBgAction;
-  }
-}
-
 // notification
 .notification{
   color: $notificationColor;
@@ -286,7 +306,7 @@
   }
 }
 
-// acide
+// aside
 %activeLink{
   border-left-color: $orange;
   background-color: #282828;
@@ -526,6 +546,42 @@ input[disabled] {
   border-color: $inputColorBorderDesabled;
   cursor: not-allowed;
 }
+
+// modal
+.modal{
+  background-color: #fff;
+  width: 1075px;
+
+  .modal-header{
+    @extend %title;
+    padding: $defaultIndent;
+    border-bottom: 1px solid $lightGrey;
+  }
+
+  .modal-body{
+    padding: 0 $defaultIndent;
+
+    form{
+      padding: 25px 0;
+
+      .label-group{
+
+        & + .label-group{
+          margin-left: $defaultIndent;
+        }
+
+        label{
+          font-weight: $fontBold;
+          font-size: $labelFontSize;
+          color: $labelColor;
+          display: block;
+          padding-bottom: $defaultIndent;
+        }
+      }
+    }
+  }
+}
+
 
 
 
