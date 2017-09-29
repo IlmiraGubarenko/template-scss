@@ -149,7 +149,7 @@ black-bg {
 .light-blue-bg {
   background-color: #80bfca; }
 
-.page-title, .section-title {
+.page-title, .section-title, .list-block .list li .list-title {
   color: #a6a6a6;
   font-size: 16px;
   font-weight: 700; }
@@ -189,6 +189,19 @@ black-bg {
     cursor: not-allowed; }
     .btn.btn-disabled:hover {
       background-color: #e3e3e3; }
+
+.list-block {
+  padding: 40px 0 75px 0; }
+  .list-block .list {
+    width: 50%; }
+    .list-block .list + .list {
+      margin-left: 65px; }
+    .list-block .list li {
+      border-bottom: 1px solid #e3e3e3;
+      padding: 20px 0 10px 0; }
+      .list-block .list li span {
+        color: #333;
+        font-size: 16px; }
 
 .table {
   border-collapse: collapse;
@@ -261,38 +274,6 @@ black-bg {
     padding-left: 13px; }
   .color-tab.color-tab-action {
     background-color: #f3f3f1; }
-
-.form-control {
-  border: 1px solid #e3e3e3;
-  -webkit-border-radius: 2px;
-          border-radius: 2px;
-  color: #a6a6a6;
-  font-size: 14px;
-  padding: 13px 16px; }
-  .form-control:hover {
-    border-color: #b1b1b1;
-    cursor: pointer;
-    color: #333; }
-  .form-control:focus {
-    border-color: #e3e3e3;
-    cursor: pointer;
-    color: #333; }
-  .form-control.invalid {
-    border-color: #ff0000; }
-  .form-control.disabled, .form-control.disabled:hover {
-    background-color: #e3e3e3;
-    border-color: #e3e3e3;
-    cursor: not-allowed; }
-
-textarea {
-  font-size: 12px;
-  padding: 17px;
-  resize: none; }
-
-input[disabled] {
-  background-color: #e3e3e3;
-  border-color: #e3e3e3;
-  cursor: not-allowed; }
 
 .notification {
   color: #fff;
@@ -430,6 +411,63 @@ input[disabled] {
         color: #a6a6a6; }
   .panel .panel-footer {
     padding: 30px 0; }
+
+.panel-date {
+  padding: 30px 0;
+  border-bottom: 1px solid #e3e3e3; }
+
+.datepicker-form .btn {
+  vertical-align: middle; }
+
+.date-input-wrap {
+  padding: 4px 0;
+  margin-right: 12px;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #333; }
+  .date-input-wrap .date-control {
+    padding: 11px 16px; }
+  .date-input-wrap #to {
+    border-left: 1px solid #e3e3e3;
+    background: url(../img/calendar.svg) no-repeat 90%;
+    -webkit-background-size: 13px 13px;
+            background-size: 13px 13px; }
+
+.form-control {
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  color: #a6a6a6;
+  font-size: 14px;
+  padding: 13px 16px; }
+  .form-control:hover {
+    border-color: #b1b1b1;
+    cursor: pointer;
+    color: #333; }
+  .form-control:focus {
+    border-color: #e3e3e3;
+    cursor: pointer;
+    color: #333; }
+  .form-control.invalid {
+    border-color: #ff0000; }
+  .form-control.disabled, .form-control.disabled:hover {
+    background-color: #e3e3e3;
+    border-color: #e3e3e3;
+    cursor: not-allowed; }
+
+textarea {
+  font-size: 12px;
+  padding: 17px;
+  resize: none; }
+
+input[disabled] {
+  background-color: #e3e3e3;
+  border-color: #e3e3e3;
+  cursor: not-allowed; }
 
 .guide-wrap {
   padding: 20px; }

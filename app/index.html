@@ -9,8 +9,10 @@
 
     <!-- GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-
+    <!-- ICONS -->
     <link rel="stylesheet" href="css/myfont.css">
+    <!-- jQuery css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -71,6 +73,51 @@
 
 <main>
     <div class="content-wrapper">
+        <div class="panel">
+            <div class="panel-header">
+                <h3 class="page-title">General statistic</h3>
+            </div>
+            <div class="panel-date text-center">
+                <form class="datepicker-form">
+                    <div class="date-input-wrap">
+                        <input type="text" id="from" name="from" class="date-control">
+                        <input type="text" id="to" name="to" class="date-control">
+                    </div>
+                    <button class="btn btn-action">
+                        <span class="icon icon-refresh"></span>
+                    </button>
+                </form>
+            </div>
+            <div class="panel-body">
+                <div class="container container-sm">
+                    <div class="list-block flex-container justify-content-sb">
+                        <ul class="list">
+                            <li class="flex-container justify-content-sb">
+                                <div class="list-title">Line leader</div>
+                                <span>123</span>
+                            </li>
+                            <li class="flex-container justify-content-sb">
+                                <div class="list-title">Line leader</div>
+                                <span>456</span>
+                            </li>
+                        </ul>
+                        <ul class="list">
+                            <li class="flex-container justify-content-sb">
+                                <div class="list-title">Line leader</div>
+                                <span>789</span>
+                            </li>
+                            <li class="flex-container justify-content-sb">
+                                <div class="list-title">Line leader</div>
+                                <span>123</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="chart-wrap">
+                        <canvas id="myChart" width="680" height="440"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="panel links">
             <div class="panel-header">
                 <h3 class="page-title">Links</h3>
@@ -134,6 +181,11 @@
 
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+
+<!-- Init plugins -->
+<script src="js/init.js"></script>
 
 </body>
 </html>
