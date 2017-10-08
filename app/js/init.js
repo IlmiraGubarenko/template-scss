@@ -68,10 +68,24 @@ $( function() {
     });
 
     // modal init
-    var modalBtn = $('.links .btn');
+    var modalBtns = $('[data-modal]');
 
-    modalBtn.on('click', function (event) {
+    modalBtns.on('click', function (event) {
         event.preventDefault();
-        $('.modal').bPopup();
+
+        var target = $(this).attr('data-modal');
+
+        $(target).bPopup({
+            closeClass: 'close-modal-btn'
+        });
     });
-} );
+
+    // styler init
+    $('select').styler();
+
+
+    // scrollbar init
+    $('.scrollbar-inner').scrollbar();
+
+
+});

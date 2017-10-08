@@ -16,11 +16,13 @@ main{
 
 .links{
 
-  .panel-body{
-    padding: 25px 0;
-  }
-
   .table {
     margin: $defaultIndent 0;
+  }
+}
+
+.generate-links-form{
+  .form-control{
+    margin-right: 16px;
   }
 }

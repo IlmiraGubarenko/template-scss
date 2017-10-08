@@ -36,11 +36,14 @@
 
 // buttons
 .btn{
-  padding: 12px 22px;
+  padding: 9px 22px;
   font-size: $btnFontSize;
   color: $btnDefaultColor;
   border-radius: 2px;
   display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
 
   & + .btn{
     margin-left: $defaultIndent;
@@ -75,7 +78,6 @@
 // color tab
 .color-tab{
   padding: 12px 19px;
-  display: flex;
   align-items: center;
   font-size: $tabFontSize;
   color: $tabColor;
@@ -155,11 +157,22 @@
     width: 100%;
   }
 
-  tbody {
+  thead{
     tr {
 
-      &:last-child{
-        td{
+      th {
+        padding: 30px 15px;
+        color: $grey;
+        text-align: left;
+      }
+    }
+  }
+
+  tbody{
+    tr {
+
+      &:last-child {
+        td {
           border-bottom: 1px solid $lightGrey;
         }
       }
@@ -167,20 +180,19 @@
       &:hover {
         background-color: $tableTrHover;
         cursor: pointer;
-      }
-    }
-  }
-    tr {
 
-      th {
-        padding: 30px 18px;
-        color: $grey;
-        text-align: left;
+        .icon-hover {
+          opacity: 1;
+        }
       }
 
       td {
         border-top: 1px solid $lightGrey;
         padding: 18px;
+
+        a{
+          margin-left: 140px;
+        }
 
         &.td-title {
           font-size: 16px;
@@ -188,18 +200,53 @@
         }
       }
     }
-    .table-sort {
-      display: inline-block;
-      color: $grey;
-      padding: 8px 10px;
-      margin: -8px -10px;
-      border-radius: 2px;
-      cursor: pointer;
+  }
 
-      &:hover {
-        background-color: $xsLightGrey;
-        color: $black;
+  .table-sort{
+    display: inline-block;
+    color: $grey;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 30px;
+    margin-top: -8px;
+    margin-bottom: -8px;
+    margin-left: -10px;
+    margin-right: -30px;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+
+    .icon{
+      position: absolute;
+      top: 4px;
+      right: 10px;
+    }
+
+    &:hover {
+      background-color: $xsLightGrey;
+      color: $black;
+
+      .icon-hover{
+        opacity: 1;
       }
+    }
+  }
+}
+
+// icon-hover
+.icon-hover{
+  display: inline-block;
+  opacity: 0;
+
+    span {
+      & + span {
+        margin-left: 25px;
+      }
+    }
+  
+    .icon:hover{
+      color: $orange;
     }
 }
 
@@ -284,23 +331,58 @@
   right: 0;
   left: 0;
 
-  .user-controls{
+  .user-controls {
+    font-weight: $fontRegular;
+    font-size: $userFontSize;
+    color: $userColor;
 
     .user-controls-item{
       padding: 20px;
       border-left: 1px solid $lightGrey;
-      min-height: 20px;
-      box-sizing: content-box;
 
-      &.user-balance{
-        font-weight: $fontRegular;
-        font-size: $userBalanceFontSize;
-        color: $userBalanceColor;
+      span{
+        display: inline-block;
+
+        & + *{
+          margin-left: $defaultIndent;
+        }
+      }
+    }
+
+    .header-notification{
+      position: relative;
+
+      .circle-notification{
+        position: absolute;
+        top: 18px;
+        right: 20px;
+        width: 8px;
+        height: 8px;
+        background-color: $orange;
+        border-radius: 50%;
       }
 
-      &.user-login{
+    }
+
+    .header-balance{
+      padding-right: 30px;
+      position: relative;
+
+      .icon-arrow-down{
+        position: absolute;
+        top: 17px;
+      }
+    }
+
+    .header-login{
+
+      .user-login{
         font-size: $userLoginFontSize;
         color: $userLoginColor;
+      }
+
+      .icon-profile{
+        line-height: 0;
       }
     }
   }
@@ -432,7 +514,7 @@
   }
 
   .panel-body {
-    padding: 0 $defaultIndent;
+    padding: 25px $defaultIndent;
   }
 
   .panel-form {
@@ -490,7 +572,7 @@
   color: $black;
 
   .date-control{
-    padding: 11px 16px;
+    padding: 9px 16px;
   }
 
   #to{
@@ -502,11 +584,12 @@
 
 // input
 .form-control{
+  height: 39px;
   border: 1px solid $inputColorBorder;
   border-radius: 2px;
   color: $inputColor;
   font-size: $inputFontSize;
-  padding: 13px 16px;
+  padding: 13px 17px;
 
   &:hover{
     border-color: $inputColorBorderHover;
@@ -550,12 +633,15 @@ input[disabled] {
 // modal
 .modal{
   background-color: #fff;
-  width: 1075px;
+  display: none;
 
   .modal-header{
-    @extend %title;
     padding: $defaultIndent;
     border-bottom: 1px solid $lightGrey;
+
+    span{
+      display: block;
+    }
   }
 
   .modal-body{
@@ -577,10 +663,104 @@ input[disabled] {
           display: block;
           padding-bottom: $defaultIndent;
         }
+
+        .input-scheme-name{
+          width: 48.79%;
+          margin-right: $defaultIndent;
+        }
+
+        .select-compain{
+          width: 48.79%;
+        }
+
+        .select-language{
+          width: 133px;
+        }
+      }
+    }
+  }
+
+  .modal-footer{
+    padding: $defaultIndent;
+    border-top: 1px solid $lightGrey;
+  }
+}
+
+// checkbox and radio btn
+input{
+
+  &[type="checkbox"]{
+    display: none;
+
+    & + label{
+      font-size: 14px;
+      color: $black;
+      cursor: pointer;
+
+      &::before{
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border: 1px solid $lightGrey;
+        background-color: #fff;
+        margin-right: 16px;
+      }
+    }
+
+    &:checked{
+      & + label{
+        &::before{
+          background: $green url("../img/checkbox-bg.png") no-repeat center;
+        }
+      }
+    }
+  }
+
+  &[type="radio"]{
+    display: none;
+  }
+}
+
+// checkbox wrap
+.checkbox-wrap{
+  padding: 30px 0;
+
+  .checkboxes{
+    padding-top: 30px;
+
+    .scrollbar-inner{
+      height: 170px;
+      flex-wrap: wrap;
+      padding-right: 20px;
+    }
+
+    .checkbox-group{
+      padding: 12px;
+      margin-right: 18px;
+
+      &:hover{
+        background-color: $xsLightGrey;
+      }
+
+      .icon{
+        margin-left: auto;
       }
     }
   }
 }
+
+#add-links-modal{
+  width: 1075px;
+
+  .checkbox-group{
+    width: 30%;
+  }
+}
+
+
+
+
 
 
 

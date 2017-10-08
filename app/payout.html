@@ -14,6 +14,7 @@
     <!-- jQuery css -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
+
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -21,14 +22,24 @@
 <!-- HEADER START-->
 <header class="header fixed-to-top">
     <div class="user-controls flex-container justify-content-end align-items-center">
-        <div class="user-controls-item user-balance flex-container align-items-center">
+        <div class="user-controls-item header-balance flex-container align-items-center">
+            <span class="icon icon-wallet"></span>
             <span>$1,500.00</span>
+            <a href=""><span class="icon icon-arrow-down"></span></a>
         </div>
-        <div class="user-controls-item user-news flex-container align-items-center"></div>
-        <div class="user-controls-item user-login flex-container align-items-center">
-            <a href="">Leonardo Dicaprio</a>
+        <div class="user-controls-item header-notification">
+            <a href="">
+                <span class="icon icon-notification"></span>
+                <span class="circle-notification"></span>
+            </a>
         </div>
-        <div class="user-controls-item user-log-out flex-container align-items-center"></div>
+        <div class="user-controls-item header-login flex-container align-items-center">
+            <span class="icon icon-profile"></span>
+            <span class="user-login">Leonardo Dicaprio</span>
+        </div>
+        <div class="user-controls-item">
+            <a href=""><span class="icon icon-quit"></span></a>
+        </div>
     </div>
 </header>
 <!-- HEADER END -->
@@ -55,7 +66,7 @@
             <li><a href=""><span class="text-center icon icon-banners"></span>Banners</a></li>
             <li><a href="personal-data.html"><span class="text-center icon icon-personaldata"></span>Personal data</a></li>
             <li class="active"><a href="payout.html"><span class="text-center icon icon-payout"></span>Payout</a></li>
-            <li><a href=""><span class="text-center icon icon-postback"></span>Postback</a></li>
+            <li><a href="postback.html"><span class="text-center icon icon-postback"></span>Postback</a></li>
         </ul>
         <div class="your-manager">
             <h3 class="page-title small-title">your manager</h3>
@@ -93,16 +104,16 @@
                         <thead>
                         <tr>
                             <th>
-                                <div class="table-sort">Data</div>
+                                <div class="table-sort">Data <span class="icon icon-hover icon-arrow-up"></span></div>
                             </th>
                             <th>
-                                <div class="table-sort">Amount($)</div>
+                                <div class="table-sort">Amount($) <span class="icon icon-hover icon-arrow-up"></span></div>
                             </th>
                             <th>
-                                <div class="table-sort">Deal</div>
+                                <div class="table-sort">Deal <span class="icon icon-hover icon-arrow-up"></span></div>
                             </th>
                             <th>
-                                <div class="table-sort">Account</div>
+                                <div class="table-sort">Account <span class="icon icon-hover icon-arrow-up"></span></div>
                             </th>
                         </tr>
                         </thead>
@@ -156,7 +167,7 @@
                         </tr>
                     </table>
                 <ul class="pagination text-center">
-                    <li></li>
+                    <li><a href=""><span class="icon icon-arrow-left"></span></a></li>
                     <li class="active"><a href="" class="link large-link">1</a></li>
                     <li><a href="" class="link large-link">2</a></li>
                     <li><a href="" class="link large-link">3</a></li>
@@ -166,7 +177,7 @@
                     <li><a href="" class="link large-link">7</a></li>
                     <li><a href="" class="link large-link">8</a></li>
                     <li><a href="" class="link large-link">9</a></li>
-                    <li></li>
+                    <li><a href=""><span class="icon icon-arrow-right"></span></a></li>
                 </ul>
             </div>
         </div>
@@ -179,6 +190,8 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
 <script src="js/jquery.bpopup.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="js/jquery.scrollbar.js"></script>
 
 <!-- Init plugins -->
 <script src="js/init.js"></script>
