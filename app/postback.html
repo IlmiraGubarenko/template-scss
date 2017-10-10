@@ -66,7 +66,7 @@
             <li><a href=""><span class="text-center icon icon-banners"></span>Banners</a></li>
             <li><a href="personal-data.html"><span class="text-center icon icon-personaldata"></span>Personal data</a></li>
             <li><a href="payout.html"><span class="text-center icon icon-payout"></span>Payout</a></li>
-            <li  class="active"><a href="postback.html"><span class="text-center icon icon-postback"></span>Postback</a></li>
+            <li class="active"><a href="postback.html"><span class="text-center icon icon-postback"></span>Postback</a></li>
         </ul>
         <div class="your-manager">
             <h3 class="page-title small-title">your manager</h3>
@@ -89,24 +89,100 @@
                 <h3 class="page-title">New postback</h3>
             </div>
             <div class="panel-body">
-                <div class="container">
-                    <div class="flex-container justify-content-sb">
-
+                <p>You can insert some parameters in this postback:</p>
+                <div class="flex-container align-items-center justify-content-sb">
+                    <div class="textarea-block flex-grow-default">
+                        <h3 class="section-title">Signup</h3>
+                        <textarea name="signup" id="" readonly>crm_userId =%user_id%
+subid =%p%
+                        </textarea>
+                    </div>
+                    <div class="textarea-block flex-grow-default">
+                        <h3 class="section-title">Deposit</h3>
+                        <textarea name="deposit" id="" readonly>crm_userId =%user_id%
+subid =%p%
+                        </textarea>
                     </div>
                 </div>
+            </div>
+            <form class="panel-form panel-label-group flex-container justify-content-sb">
+                <div class="label-group flex-grow-default">
+                    <label for="postback-type">Postback type</label>
+                    <select name="" id="postback-type">
+                        <option value="">S2S (http://..)</option>
+                        <option value="">one</option>
+                        <option value="">S2S (http://..)</option>
+                        <option value="">one</option>
+                        <option value="">S2S (http://..)</option>
+                    </select>
+                </div>
+                <div class="label-group flex-grow-default">
+                    <label for="to-countries">To countries</label>
+                    <select name="" id="to-countries">
+                        <option value="">Select countries</option>
+                        <option value="">one</option>
+                        <option value="">one</option>
+                        <option value="">one</option>
+                        <option value="">one</option>
+                    </select>
+                </div>
+                <div class="label-group flex-grow-default">
+                    <label for="sending-options">Sending options:</label>
+                    <select name="" id="sending-options">
+                        <option value="">Select</option>
+                        <option value="">one</option>
+                        <option value="">one</option>
+                        <option value="">one</option>
+                        <option value="">one</option>
+                    </select>
+                </div>
+            </form>
+            <div class="checkbox-and-slider flex-container">
+                <div class="checkbox-wrap">
+                    <h3 class="section-title"><span class="dark-red">NOT</span> send statuses</h3>
+                    <div class="checkboxes">
+                        <div class="scrollbar-inner">
+                            <div class="checkbox-group flex-container align-items-center">
+                                <input type="checkbox" name="link21" id="link21">
+                                <label for="link21" class="flex-container align-items-center">checkNumber</label>
+                            </div>
+                            <div class="checkbox-group flex-container align-items-center">
+                                <input type="checkbox" name="link22" id="link22">
+                                <label for="link22" class="flex-container align-items-center">noAnswer</label>
+                            </div>
+                            <div class="checkbox-group flex-container align-items-center">
+                                <input type="checkbox" name="link23" id="link23">
+                                <label for="link23" class="flex-container align-items-center">noCall</label>
+                            </div>
+                            <div class="checkbox-group flex-container align-items-center">
+                                <input type="checkbox" name="link24" id="link24">
+                                <label for="link24" class="flex-container align-items-center">callAgain</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="range-slider-wrap">
+                    <h3 class="section-title">Send after:</h3>
+                    <div id="slider">
+                        <div id="custom-handle" class="ui-slider-handle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-row text-right panel-body">
+                <a href="" class="btn btn-action" data-modal="#add-banners-modal">Create Pixel</a>
             </div>
         </div>
     </div>
 </main>
 
 <!-- MODAL ADD BANNERS -->
-<div class="modal" id="add-links-modal">
+<div class="modal" id="add-banners-modal">
     <div class="modal-header flex-container align-items-center justify-content-sb">
-        <h3 class="page-title">add url</h3>
+        <h3 class="page-title">add banners</h3>
         <span class="icon icon-close"></span>
     </div>
     <div class="modal-body">
-        <form class="flex-container align-items-center">
+        <form class="flex-container">
             <div class="label-group flex-grow-default">
                 <label for="user-scheme-name">Scheme name</label>
                 <input type="text" class="form-control input-scheme-name" id="user-scheme-name" placeholder="Name">
@@ -131,99 +207,130 @@
                 </div>
             </div>
         </form>
-        <div class="checkbox-wrap">
-            <h3 class="section-title">Select websites</h3>
-            <div class="checkboxes">
-                <div class="flex-container scrollbar-inner">
-                    <div class="checkbox-group flex-container align-items-center">
-                        <input type="checkbox" name="link1" id="link1">
-                        <label for="link1" class="flex-container align-items-center">Landing page Money</label>
-                        <span class="icon icon-show"></span>
+        <form class="panel-form flex-container">
+            <div class="label-group flex-grow-default">
+                <label for="weight-height">Weight-Height</label>
+                <select name="" id="weight-height">
+                    <option value="">Select</option>
+                    <option value="">one</option>
+                    <option value="">Select</option>
+                    <option value="">one</option>
+                    <option value="">Select</option>
+                </select>
+            </div>
+            <div class="label-group flex-grow-default">
+                <label for="design">Design</label>
+                <select name="" id="design">
+                    <option value="">Select</option>
+                    <option value="">one</option>
+                    <option value="">one</option>
+                    <option value="">one</option>
+                    <option value="">one</option>
+                </select>
+            </div>
+            <div class="label-group flex-grow-default">
+                <label for="file-type">File type</label>
+                <select name="" id="file-type">
+                    <option value="">All</option>
+                    <option value="">one</option>
+                    <option value="">one</option>
+                    <option value="">one</option>
+                    <option value="">one</option>
+                </select>
+            </div>
+        </form>
+        <div class="checkbox-and-checkbox flex-container row">
+            <div class="checkbox-wrap">
+                <h3 class="section-title">Select banners</h3>
+                <div class="checkboxes">
+                    <div class="scrollbar-inner">
+                        <div class="checkbox-group flex-container align-items-center">
+                            <input type="checkbox" name="link31" id="link31">
+                            <label for="link31" class="flex-container align-items-center">Banner main</label>
+                            <span class="icon icon-show"></span>
+                        </div>
+                        <div class="checkbox-group flex-container align-items-center">
+                            <input type="checkbox" name="link32" id="link32">
+                            <label for="link32" class="flex-container align-items-center">Sign up banner</label>
+                            <span class="icon icon-show"></span>
+                        </div>
+                        <div class="checkbox-group flex-container align-items-center">
+                            <input type="checkbox" name="link33" id="link33">
+                            <label for="link33" class="flex-container align-items-center">Left banner</label>
+                            <span class="icon icon-show"></span>
+                        </div>
+                        <div class="checkbox-group flex-container align-items-center">
+                            <input type="checkbox" name="link44" id="link44">
+                            <label for="link44" class="flex-container align-items-center">Right banner</label>
+                            <span class="icon icon-show"></span>
+                        </div>
+                        <div class="checkbox-group flex-container align-items-center">
+                            <input type="checkbox" name="link35" id="link35">
+                            <label for="link35" class="flex-container align-items-center">Bottom banner</label>
+                            <span class="icon icon-show"></span>
+                        </div>
+                        <div class="checkbox-group flex-container align-items-center">
+                            <input type="checkbox" name="link36" id="link36">
+                            <label for="link36" class="flex-container align-items-center">Long banner</label>
+                            <span class="icon icon-show"></span>
+                        </div>
+                        <div class="checkbox-group flex-container align-items-center">
+                            <input type="checkbox" name="link37" id="link37">
+                            <label for="link37" class="flex-container align-items-center">Personal cabinet banner</label>
+                            <span class="icon icon-show"></span>
+                        </div>
+                        <div class="checkbox-group flex-container align-items-center">
+                            <input type="checkbox" name="link38" id="link38">
+                            <label for="link38" class="flex-container align-items-center">Popup banner</label>
+                            <span class="icon icon-show"></span>
+                        </div>
                     </div>
-                    <div class="checkbox-group flex-container align-items-center">
-                        <input type="checkbox" name="link2" id="link2">
-                        <label for="link2" class="flex-container align-items-center">Landing page Money</label>
-                        <span class="icon icon-show"></span>
-                    </div>
-                    <div class="checkbox-group flex-container align-items-center">
-                        <input type="checkbox" name="link3" id="link3">
-                        <label for="link3" class="flex-container align-items-center">Landing page Money</label>
-                        <span class="icon icon-show"></span>
-                    </div>
-                    <div class="checkbox-group flex-container align-items-center">
-                        <input type="checkbox" name="link4" id="link4">
-                        <label for="link4" class="flex-container align-items-center">Landing page Money</label>
-                        <span class="icon icon-show"></span>
-                    </div>
-                    <div class="checkbox-group flex-container align-items-center">
-                        <input type="checkbox" name="link5" id="link5">
-                        <label for="link5" class="flex-container align-items-center">Landing page Money</label>
-                        <span class="icon icon-show"></span>
-                    </div>
-                    <div class="checkbox-group flex-container align-items-center">
-                        <input type="checkbox" name="link6" id="link6">
-                        <label for="link6" class="flex-container align-items-center">Landing page Money</label>
-                        <span class="icon icon-show"></span>
-                    </div>
-                    <div class="checkbox-group flex-container align-items-center">
-                        <input type="checkbox" name="link7" id="link7">
-                        <label for="link7" class="flex-container align-items-center">Landing page Money</label>
-                        <span class="icon icon-show"></span>
-                    </div>
-                    <div class="checkbox-group flex-container align-items-center">
-                        <input type="checkbox" name="link8" id="link8">
-                        <label for="link8" class="flex-container align-items-center">Landing page Money</label>
-                        <span class="icon icon-show"></span>
-                    </div>
-                    <div class="checkbox-group flex-container align-items-center">
-                        <input type="checkbox" name="link9" id="link9">
-                        <label for="link9" class="flex-container align-items-center">Landing page Money</label>
-                        <span class="icon icon-show"></span>
-                    </div>
-                    <div class="checkbox-group flex-container align-items-center">
-                        <input type="checkbox" name="link10" id="link10">
-                        <label for="link10" class="flex-container align-items-center">Landing page Money</label>
-                        <span class="icon icon-show"></span>
-                    </div>
-                    <div class="checkbox-group flex-container align-items-center">
-                        <input type="checkbox" name="link11" id="link11">
-                        <label for="link11" class="flex-container align-items-center">Landing page Money</label>
-                        <span class="icon icon-show"></span>
-                    </div>
-                    <div class="checkbox-group flex-container align-items-center">
-                        <input type="checkbox" name="link12" id="link12">
-                        <label for="link12" class="flex-container align-items-center">Landing page Money</label>
-                        <span class="icon icon-show"></span>
-                    </div>
-                    <div class="checkbox-group flex-container align-items-center">
-                        <input type="checkbox" name="link13" id="link13">
-                        <label for="link13" class="flex-container align-items-center">Landing page Money</label>
-                        <span class="icon icon-show"></span>
-                    </div>
-                    <div class="checkbox-group flex-container align-items-center">
-                        <input type="checkbox" name="link14" id="link14">
-                        <label for="link14" class="flex-container align-items-center">Landing page Money</label>
-                        <span class="icon icon-show"></span>
-                    </div>
-                    <div class="checkbox-group flex-container align-items-center">
-                        <input type="checkbox" name="link15" id="link15">
-                        <label for="link15" class="flex-container align-items-center">Landing page Money</label>
-                        <span class="icon icon-show"></span>
-                    </div>
-                    <div class="checkbox-group flex-container align-items-center">
-                        <input type="checkbox" name="link16" id="link16">
-                        <label for="link16" class="flex-container align-items-center">Landing page Money</label>
-                        <span class="icon icon-show"></span>
-                    </div>
-                    <div class="checkbox-group flex-container align-items-center">
-                        <input type="checkbox" name="link17" id="link17">
-                        <label for="link17" class="flex-container align-items-center">Landing page Money</label>
-                        <span class="icon icon-show"></span>
-                    </div>
-                    <div class="checkbox-group flex-container align-items-center">
-                        <input type="checkbox" name="link18" id="link18">
-                        <label for="link18" class="flex-container align-items-center">Landing page Money</label>
-                        <span class="icon icon-show"></span>
+                </div>
+            </div>
+            <div class="checkbox-wrap">
+                <h3 class="section-title">Select websites</h3>
+                <div class="checkboxes">
+                    <div class="scrollbar-inner">
+                        <div class="checkbox-group flex-container align-items-center">
+                            <input type="checkbox" name="link41" id="link41">
+                            <label for="link41" class="flex-container align-items-center">Landing page Money</label>
+                            <span class="icon icon-show"></span>
+                        </div>
+                        <div class="checkbox-group flex-container align-items-center">
+                            <input type="checkbox" name="link42" id="link42">
+                            <label for="link42" class="flex-container align-items-center">LP Your choise</label>
+                            <span class="icon icon-show"></span>
+                        </div>
+                        <div class="checkbox-group flex-container align-items-center">
+                            <input type="checkbox" name="link43" id="link43">
+                            <label for="link43" class="flex-container align-items-center">LP Wallet</label>
+                            <span class="icon icon-show"></span>
+                        </div>
+                        <div class="checkbox-group flex-container align-items-center">
+                            <input type="checkbox" name="link44" id="link44">
+                            <label for="link44" class="flex-container align-items-center">E-Shop 01</label>
+                            <span class="icon icon-show"></span>
+                        </div>
+                        <div class="checkbox-group flex-container align-items-center">
+                            <input type="checkbox" name="link45" id="link45">
+                            <label for="link45" class="flex-container align-items-center">Toy Store</label>
+                            <span class="icon icon-show"></span>
+                        </div>
+                        <div class="checkbox-group flex-container align-items-center">
+                            <input type="checkbox" name="link46" id="link46">
+                            <label for="link46" class="flex-container align-items-center">Book Store</label>
+                            <span class="icon icon-show"></span>
+                        </div>
+                        <div class="checkbox-group flex-container align-items-center">
+                            <input type="checkbox" name="link47" id="link47">
+                            <label for="link47" class="flex-container align-items-center">Charity</label>
+                            <span class="icon icon-show"></span>
+                        </div>
+                        <div class="checkbox-group flex-container align-items-center">
+                            <input type="checkbox" name="link48" id="link48">
+                            <label for="link48" class="flex-container align-items-center">LP Icons Store</label>
+                            <span class="icon icon-show"></span>
+                        </div>
                     </div>
                 </div>
             </div>

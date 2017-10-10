@@ -11,6 +11,10 @@
   text-align: left;
 }
 
+.text-right{
+  text-align: right;
+}
+
 .vertical-middle{
   vertical-align: middle;
 }
@@ -98,6 +102,9 @@ black-bg{
 }
 .red-bg{
   background-color: #ff0000;
+}
+.dark-red{
+  color: $darkRed;
 }
 .pink-bg{
   background-color: #de5252;
