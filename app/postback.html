@@ -22,15 +22,29 @@
 <!-- HEADER START-->
 <header class="header fixed-to-top">
     <div class="user-controls flex-container justify-content-end align-items-center">
-        <div class="user-controls-item header-balance flex-container align-items-center">
+        <div class="user-controls-item header-balance flex-container align-items-center dropdown-wrap">
             <span class="icon icon-wallet"></span>
             <span>$1,500.00</span>
-            <a href=""><span class="icon icon-arrow-down"></span></a>
+            <span class="icon icon-arrow-down"></span>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                    <li><a href="">link</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="user-controls-item header-notification">
+        <div class="user-controls-item header-notification dropdown-wrap">
             <a href="">
                 <span class="icon icon-notification"></span>
                 <span class="circle-notification"></span>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li><a href="">link</a></li>
+                        <li><a href="">link</a></li>
+                        <li><a href="">link</a></li>
+                    </ul>
+                </div>
             </a>
         </div>
         <div class="user-controls-item header-login flex-container align-items-center">
@@ -44,7 +58,7 @@
 </header>
 <!-- HEADER END -->
 
-<!-- ACIDE START-->
+<!-- ASIDE START-->
 <aside class="aside fixed-to-top">
     <div class="menu-control flex-container align-items-center justify-content-sb">
         <div class="logo">
@@ -60,13 +74,48 @@
     </div>
     <div class="aside-menu">
         <ul>
-            <li><a href="index.html"><span class="text-center icon icon-general"></span>General</a></li>
-            <li><a href="details.html"><span class="text-center icon icon-details"></span>Details</a></li>
-            <li><a href=""><span class="text-center icon icon-links"></span>Links</a></li>
-            <li><a href=""><span class="text-center icon icon-banners"></span>Banners</a></li>
-            <li><a href="personal-data.html"><span class="text-center icon icon-personaldata"></span>Personal data</a></li>
-            <li><a href="payout.html"><span class="text-center icon icon-payout"></span>Payout</a></li>
-            <li class="active"><a href="postback.html"><span class="text-center icon icon-postback"></span>Postback</a></li>
+            <li>
+                <a href="index.html">
+                    <span class="text-center icon icon-general"></span>
+                    <span class="menu-link">General</span>
+                </a>
+            </li>
+            <li>
+                <a href="details.html">
+                    <span class="text-center icon icon-details"></span>
+                    <span class="menu-link">Details</span>
+                </a>
+            </li>
+            <li>
+                <a href="links.html">
+                    <span class="text-center icon icon-links"></span>
+                    <span class="menu-link">Links</span>
+                </a>
+            </li>
+            <li>
+                <a href="banners.html">
+                    <span class="text-center icon icon-banners"></span>
+                    <span class="menu-link">Banners</span>
+                </a>
+            </li>
+            <li>
+                <a href="personal-data.html">
+                    <span class="text-center icon icon-personaldata"></span>
+                    <span class="menu-link">Personal data</span>
+                </a>
+            </li>
+            <li>
+                <a href="payout.html">
+                    <span class="text-center icon icon-payout"></span>
+                    <span class="menu-link">Payout</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="postback.html">
+                    <span class="text-center icon icon-postback"></span>
+                    <span class="menu-link">Postback</span>
+                </a>
+            </li>
         </ul>
         <div class="your-manager">
             <h3 class="page-title small-title">your manager</h3>
@@ -80,7 +129,7 @@
         </div>
     </div>
 </aside>
-<!-- ACIDE END -->
+<!-- ASIDE END -->
 
 <main>
     <div class="content-wrapper">
@@ -345,6 +394,16 @@ subid =%p%
     </div>
 </div>
 
+<!-- Loader start -->
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div id="object"></div>
+        </div>
+    </div>
+</div>
+<!-- Loader end -->
+
 
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -356,6 +415,13 @@ subid =%p%
 
 <!-- Init plugins -->
 <script src="js/init.js"></script>
+
+<!-- Plugin -->
+<script src="js/plugins.min.js"></script>
+
+<!-- Plugin -->
+<script src="js/plugins.min.js"></script>
+
 
 </body>
 </html>

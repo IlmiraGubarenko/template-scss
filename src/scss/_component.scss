@@ -1,5 +1,64 @@
 // Component
 
+// loader
+#loading{
+  background-color: $orange;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  margin-top: 0px;
+  top: 0px;
+  transition: opacity .3s linear, z-index .1s linear .3s;
+}
+#loading.hide{
+  z-index: -1;
+  opacity: 0;
+}
+#loading-center{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#loading-center-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 200px;
+  width: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+}
+#object{
+  width: 80px;
+  height: 80px;
+  background-color: #FFF;
+  -webkit-animation: animate 1s infinite ease-in-out;
+  animation: animate 1s infinite ease-in-out;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+}
+@-webkit-keyframes animate {
+  0% { -webkit-transform: perspective(160px); }
+  50% { -webkit-transform: perspective(160px) rotateY(-180deg); }
+  100% { -webkit-transform: perspective(160px) rotateY(-180deg) rotateX(-180deg); }
+}
+
+@keyframes animate {
+  0% {
+    transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+  } 50% {
+      transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+      -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg) ;
+    } 100% {
+        transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+        -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+      }
+}
+
+
 // title
 %title{
   color: $titleColor;
@@ -368,12 +427,13 @@
     }
 
     .header-balance{
-      padding-right: 30px;
+      padding-right: 50px;
       position: relative;
 
       .icon-arrow-down{
         position: absolute;
         top: 17px;
+        right: 20px;
       }
     }
 
@@ -442,16 +502,13 @@
           padding: 14px;
           border-left: 4px solid transparent;
 
-          span{
-            display: inline-block;
-            width: 15px;
-          }
-
           .icon{
             font-size: 17px;
             margin-right: 15px;
+            width: 15px;
+            display: inline-block;
           }
-          
+
           &:hover{
             @extend %activeLink;
           }
@@ -529,6 +586,17 @@
   .panel-form {
     padding: 40px 0;
     border-bottom: 1px solid $lightGrey;
+
+    .personal-data{
+      .label-group{
+        & + .label-group{
+          margin-left: 0;
+        }
+        label{
+          padding-bottom: 0;
+        }
+      }
+    }
 
     .label-group{
       & + .label-group{
@@ -737,7 +805,6 @@ input[disabled] {
   width: 1075px;
 }
 
-
 // checkbox and radio btn
 input{
 
@@ -807,9 +874,16 @@ input{
   top: 12px;
   width: 0;
   height: 0;
-  border: 10px solid transparent;
+  border: 10px solid white;
   border-bottom-color: $orange;
   background: transparent;
+  cursor: pointer;
+  text-align: center;
+
+  &:focus{
+    outline: none;
+    color: $black;
+  }
 
   span{
     position: absolute;
@@ -832,68 +906,25 @@ input{
   border-radius: 0;
 }
 
-// checkbox-and-slider
-.checkbox-and-slider{
-  padding: 0 $defaultIndent;
-  border-bottom: 1px solid $lightGrey;
-
-  .checkbox-wrap{
-    padding: 23px 20px 23px 0;
-    border-right: 1px solid $lightGrey;
-    width: 50%;
-
-    .checkboxes{
-
-      .scrollbar-inner{
-        padding: 0;
-
-        .checkbox-group{
-          margin: 0;
-        }
-      }
-    }
-  }
-
-  .range-slider-wrap{
-    padding: 23px 0 23px 20px;
-    width: 50%;
-
-    .section-title{
-      margin-bottom: 55px;
+.dropdown-menu{
+  display: none;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  top: 100%;
+  left: 0;
+}
+.dropdown-wrap{
+  position: relative;
+  cursor: pointer;
+  &:hover{
+    .dropdown-menu{
+      display: block;
     }
   }
 }
 
-.checkbox-and-checkbox{
-  border-top: 1px solid $lightGrey;
-
-  .checkbox-wrap{
-    padding: 30px 18px 18px 18px;
-    border-right: 1px solid $lightGrey;
-    width: 50%;
-
-    .checkboxes{
-
-      .scrollbar-inner{
-          min-height: 350px;
-
-        .checkbox-group{
-
-          .icon-show{
-            opacity: 0;
-          }
-
-          &:hover{
-
-            .icon-show{
-              opacity: 1;
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
 
 
