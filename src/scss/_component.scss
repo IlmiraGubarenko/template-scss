@@ -100,6 +100,16 @@
   }
 }
 
+@media (max-width: 767px){
+  .link{
+    font-size: $linkFontSizeDefault;
+
+    &.large-link{
+      font-size: 14px;
+    }
+  }
+}
+
 // buttons
 .btn{
   padding: 9px 22px;
@@ -170,7 +180,7 @@
 
 // list
 .list-block {
-  padding: 20px 0 75px 0;
+  padding: 20px 0 55px 0;
 
   .list {
     width: 50%;
@@ -197,6 +207,10 @@
 
 // chart
 .chart-wrap{
+
+  .section-title{
+    margin-bottom: 25px;
+  }
 
   .tabs{
     margin: 40px 0 70px 0;
@@ -296,6 +310,32 @@
   }
 }
 
+@media (max-width: 767px){
+  .table {
+  margin-bottom: 15px;
+
+    &.full-width{
+      width: 500px;
+    }
+
+    tbody{
+      tr {
+        td {
+          padding: 9px;
+
+          a{
+            margin-left: 50px;
+          }
+
+          &.td-title {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
 // icon-hover
 .icon-hover{
   display: inline-block;
@@ -341,6 +381,35 @@
   }
 }
 
+@media (max-width: 767px){
+  .pagination{
+    li{
+      a{
+        padding: 15px;
+      }
+    }
+  }
+}
+@media (max-width: 599px){
+  .pagination{
+    li{
+      a{
+        padding: 9px;
+      }
+    }
+  }
+}
+@media (max-width: 479px){
+  .pagination{
+    li{
+      a{
+        padding: 3px;
+      }
+    }
+  }
+}
+
+
 // notification
 .notification{
   color: $notificationColor;
@@ -376,6 +445,7 @@
   max-width: 684px;
   margin: 0 auto;
 }
+
 
 //row
 .row{
@@ -443,13 +513,81 @@
         font-size: $userLoginFontSize;
         color: $userLoginColor;
       }
+    }
+  }
+}
 
-      .icon-profile{
-        line-height: 0;
+@media (max-width: 599px){
+  .header{
+
+    .user-controls {
+      font-size: 16px;
+
+      .user-controls-item{
+        padding: 15px;
+
+        span{
+
+          & + *{
+            margin-left: 8px;
+          }
+        }
+      }
+
+      .header-notification{
+
+        .circle-notification{
+          top: 13px;
+          right: 15px;
+        }
+      }
+
+      .header-balance{
+        padding-right: 20px;
+
+        .icon-arrow-down{
+          display: none;
+        }
       }
     }
   }
 }
+@media (max-width: 479px){
+  .header{
+
+    .user-controls {
+      font-size: 13px;
+
+      .user-controls-item{
+        padding: 18px 7px;
+
+        span{
+
+          & + *{
+            margin-left: 2px;
+          }
+        }
+      }
+
+      .header-notification{
+
+        .circle-notification{
+          top: 13px;
+          right: 5px;
+        }
+      }
+
+      .header-balance{
+        padding-right: 2px;
+
+        .icon-wallet{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 
 // aside
 %activeLink{
@@ -559,6 +697,12 @@
   height: calc(100vh - 60px);
   overflow-y: auto;
 }
+
+@media (max-width: 479px){
+  .content-wrapper{
+    padding: 0;
+  }
+}
   
 .panel {
   background-color: #fff;
@@ -640,9 +784,82 @@
   }
 }
 
+@media (max-width: 767px){
+  .panel{
+    .panel-label-group{
+      display: block;
+
+      .label-group{
+        & + .label-group{
+          margin-left: 0;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 599px){
+  .panel {
+
+    .panel-form {
+
+      form {
+        width: 300px;
+        display: inline-block;
+
+        .form-control {
+          width: 185px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 479px){
+  .panel {
+
+    .panel-form {
+      padding: 20px 0;
+      border-bottom: 1px solid $lightGrey;
+
+      .label-group{
+        & + .label-group{
+          margin-left: 0;
+        }
+      }
+
+      form {
+        width: 232px;
+        display: inline-block;
+
+        .form-control {
+          width: 125px;
+        }
+
+        .label-group {
+          & + .label-group {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    .panel-label-group{
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+}
+
 .panel-date{
   padding: 30px 0;
   border-bottom: 1px solid $lightGrey;
+}
+
+@media (max-width: 767px) {
+  .panel {
+    .panel-body {
+      padding: 10px $defaultIndent;
+    }
+  }
 }
 
 // date input block
@@ -650,6 +867,16 @@
 
   .btn{
     vertical-align: middle;
+  }
+}
+
+@media (max-width: 599px){
+  .datepicker-form{
+
+    .btn{
+      display: block;
+      margin: 10px auto;
+    }
   }
 }
 
@@ -665,12 +892,31 @@
 
   .date-control{
     padding: 9px 16px;
+    text-align: center;
   }
 
   #to{
     border-left: 1px solid $lightGrey;
     background: url(../img/calendar.svg) no-repeat 90%;
     background-size: 13px 13px;
+  }
+}
+
+@media (max-width: 599px){
+  .date-input-wrap {
+    margin-right: 0;
+
+    .date-control{
+      padding: 9px 4px;
+    }
+  }
+}
+@media (max-width: 479px){
+  .date-input-wrap {
+
+    .date-control{
+      padding: 3px;
+    }
   }
 }
 
@@ -709,6 +955,13 @@
     }
   }
 }
+
+@media (max-width: 479px){
+  .form-control{
+    padding: 13px 3px;
+  }
+}
+
 
 // textarea
 .textarea-block{
@@ -759,6 +1012,10 @@ input[disabled] {
     form{
       padding: 25px 0;
 
+      .scheme-name{
+        width: 100%;
+      }
+
       .label-group{
 
         & + .label-group{
@@ -793,6 +1050,73 @@ input[disabled] {
   }
 }
 
+@media (max-width: 1199px){
+  .modal{
+
+    .modal-body{
+
+      form{
+
+        .label-group{
+
+          .input-scheme-name{
+            width: 45%;
+          }
+
+          .select-compain{
+            width: 45%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px){
+  .modal{
+
+    .modal-footer{
+      form{
+        display: block;
+
+        .form-control{
+          margin-bottom: 15px;
+        }
+
+        .btn{
+          padding: 9px 12px;
+        }
+      }
+
+    }
+
+    .modal-body{
+
+      form{
+      display: block;
+
+        .label-group{
+
+          & + .label-group{
+            margin-left: 0;
+            margin-top: 20px;
+          }
+
+          .input-scheme-name{
+            width: 100%;
+          }
+
+          .select-compain{
+            width: 100%;
+            display: block;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
 #add-links-modal{
   width: 1075px;
 
@@ -801,8 +1125,69 @@ input[disabled] {
   }
 }
 
+@media (max-width: 1199px){
+  #add-links-modal{
+    width: 768px;
+  }
+}
+@media (max-width: 991px){
+  #add-links-modal{
+    width: 600px;
+  }
+}
+@media (max-width: 767px){
+  #add-links-modal{
+    width: 480px;
+
+    .checkbox-group{
+      width: 80%;
+    }
+  }
+}
+@media (max-width: 599px){
+  #add-links-modal{
+    width: 300px;
+  }
+}
+@media (max-width: 479px){
+  #add-links-modal{
+    width: 200px;
+  }
+}
+
+
 #add-banners-modal{
   width: 1075px;
+}
+
+@media (max-width: 1199px){
+  #add-banners-modal{
+    width: 768px;
+  }
+}
+@media (max-width: 991px){
+  #add-banners-modal{
+    width: 600px;
+  }
+}
+@media (max-width: 767px){
+  #add-banners-modal{
+    width: 480px;
+
+    .checkbox-group{
+      width: 80%;
+    }
+  }
+}
+@media (max-width: 599px){
+  #add-banners-modal{
+    width: 300px;
+  }
+}
+@media (max-width: 479px){
+  #add-banners-modal{
+    width: 200px;
+  }
 }
 
 // checkbox and radio btn
@@ -924,6 +1309,21 @@ input{
     }
   }
 }
+
+.table-responsive{
+  overflow-x: auto;
+}
+
+@media (max-width: 599px) {
+  .btn-responsive {
+    margin-top: 15px;
+  }
+}
+
+
+
+
+
 
 
 

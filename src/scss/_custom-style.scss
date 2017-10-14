@@ -63,6 +63,22 @@ main{
   }
 }
 
+@media (max-width: 599px){
+  .checkbox-and-slider{
+    display: block;
+
+    .checkbox-wrap{
+      width: 100%;
+      border: none;
+    }
+
+    .range-slider-wrap{
+      width: 100%;
+      padding: 15px 0 65px 0;
+    }
+  }
+}
+
 .checkbox-and-checkbox{
   border-top: 1px solid $lightGrey;
 
@@ -94,6 +110,17 @@ main{
   }
 }
 
+@media (max-width: 767px){
+  .checkbox-and-checkbox{
+    display: block;
+
+    .checkbox-wrap{
+      width: 100%;
+    }
+  }
+}
+
+
 // links.html
 .content-wrapper{
   .modal{
@@ -104,6 +131,37 @@ main{
         .checkbox-group-width{
           .checkbox-group{
             width: 30%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px){
+  .content-wrapper{
+    .modal{
+      .modal-body{
+        .checkbox-wrap{
+          .checkbox-group-width{
+            .checkbox-group{
+              width: 45%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px){
+  .content-wrapper{
+    .modal{
+      .modal-body{
+        .checkbox-wrap{
+          .checkbox-group-width{
+            .checkbox-group{
+              width: 100%;
+            }
           }
         }
       }
@@ -194,5 +252,19 @@ main{
 .header-balance{
   .dropdown-menu{
     left: -($defaultIndent);
+  }
+}
+@media (max-width: 599px){
+  .header-balance{
+    .dropdown-menu{
+      left: -8px;
+    }
+  }
+}
+@media (max-width: 479px){
+  .header-balance{
+    .dropdown-menu{
+      left: -2px;
+    }
   }
 }
