@@ -691,6 +691,7 @@
   }
 }
 
+
 // content wrapper
 .content-wrapper{
   padding: $defaultIndent;
@@ -1319,6 +1320,22 @@ input{
     margin-top: 15px;
   }
 }
+
+
+  -webkit-scrollbar-track {
+    background-color: #f58220;
+    box-shadow: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background-color: #f58220;
+    box-shadow: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
 
 
 
