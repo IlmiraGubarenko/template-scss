@@ -72,11 +72,6 @@
 
 
 
-
-
-
-
-
 /*************** SIMPLE INNER SCROLLBAR ***************/
 
 .scrollbar-inner > .scroll-element,
@@ -86,7 +81,7 @@
     margin: 0;
     padding: 0;
     position: absolute;
-    z-index: 10;
+    //z-index: 10;
 }
 
 .scrollbar-inner > .scroll-element div {

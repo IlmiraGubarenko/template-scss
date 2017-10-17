@@ -233,6 +233,10 @@
     width: 100%;
   }
 
+  &.full-light-width{
+    width: 100%;
+  }
+
   thead{
     tr {
 
@@ -310,12 +314,21 @@
   }
 }
 
+@media (max-width: 1199px){
+  .table{
+
+    &.full-light-width{
+      width: 1000px;
+    }
+  }
+}
+
 @media (max-width: 767px){
   .table {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 
     &.full-width{
-      width: 500px;
+      width: 460px;
     }
 
     tbody{
@@ -324,7 +337,7 @@
           padding: 9px;
 
           a{
-            margin-left: 50px;
+            margin-left: 0;
           }
 
           &.td-title {
@@ -381,6 +394,11 @@
   }
 }
 
+@media (max-width: 1199px){
+  .pagination{
+    margin-top: 30px;
+  }
+}
 @media (max-width: 767px){
   .pagination{
     li{
@@ -862,6 +880,13 @@
     }
   }
 }
+@media (max-width: 599px){
+  .panel-date{
+    padding: 30px 0 15px 0;
+    border-bottom: 1px solid $lightGrey;
+  }
+}
+
 
 // date input block
 .datepicker-form{
@@ -1061,7 +1086,8 @@ input[disabled] {
         .label-group{
 
           .input-scheme-name{
-            width: 45%;
+            width: 50%;
+            margin-right: 10px;
           }
 
           .select-compain{
@@ -1335,6 +1361,7 @@ input{
 
   ::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
   }
 
 

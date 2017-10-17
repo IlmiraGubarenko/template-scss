@@ -245,8 +245,7 @@ black-bg {
   border: none;
   margin: 0;
   padding: 0;
-  position: absolute;
-  z-index: 10; }
+  position: absolute; }
 
 .scrollbar-inner > .scroll-element div {
   display: block;
@@ -1078,6 +1077,8 @@ black-bg {
   font-size: 13px; }
   .table.full-width {
     width: 100%; }
+  .table.full-light-width {
+    width: 100%; }
   .table thead tr th {
     padding: 30px 15px;
     color: #bababa;
@@ -1122,15 +1123,19 @@ black-bg {
       .table .table-sort:hover .icon-hover {
         opacity: 1; }
 
+@media (max-width: 1199px) {
+  .table.full-light-width {
+    width: 1000px; } }
+
 @media (max-width: 767px) {
   .table {
     margin-bottom: 15px; }
     .table.full-width {
-      width: 500px; }
+      width: 460px; }
     .table tbody tr td {
       padding: 9px; }
       .table tbody tr td a {
-        margin-left: 50px; }
+        margin-left: 0; }
       .table tbody tr td.td-title {
         font-size: 14px; } }
 
@@ -1153,6 +1158,10 @@ black-bg {
   .pagination li a {
     display: inline-block;
     padding: 18px; }
+
+@media (max-width: 1199px) {
+  .pagination {
+    margin-top: 30px; } }
 
 @media (max-width: 767px) {
   .pagination li a {
@@ -1406,6 +1415,11 @@ black-bg {
   .panel .panel-body {
     padding: 10px 18px; } }
 
+@media (max-width: 599px) {
+  .panel-date {
+    padding: 30px 0 15px 0;
+    border-bottom: 1px solid #e3e3e3; } }
+
 .datepicker-form .btn {
   vertical-align: middle; }
 
@@ -1522,7 +1536,8 @@ input[disabled] {
 
 @media (max-width: 1199px) {
   .modal .modal-body form .label-group .input-scheme-name {
-    width: 45%; }
+    width: 50%;
+    margin-right: 10px; }
   .modal .modal-body form .label-group .select-compain {
     width: 45%; } }
 
@@ -1700,7 +1715,8 @@ input[type="radio"] {
           box-shadow: none; }
 
 ::-webkit-scrollbar {
-  width: 5px; }
+  width: 5px;
+  height: 5px; }
 
 .guide-wrap {
   padding: 20px; }
