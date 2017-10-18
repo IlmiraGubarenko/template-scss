@@ -25,6 +25,16 @@ main{
   }
 }
 
+@media (max-width: 479px){
+  .links{
+
+    .table {
+      margin: 10px 0;
+    }
+  }
+}
+
+
 .generate-links-form{
   .form-control{
     margin-right: 16px;
@@ -187,7 +197,7 @@ main{
 
   .aside{
     width: $sidebarMobileWidth;
-    overflow-y: visible;
+    overflow-y: auto;
 
     .logo{
       display: none;
