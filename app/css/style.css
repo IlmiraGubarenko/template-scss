@@ -1613,7 +1613,7 @@ input[disabled] {
 
 @media (max-width: 479px) {
   #add-links-modal {
-    width: 200px; } }
+    width: 280px; } }
 
 #add-banners-modal {
   width: 1075px; }
@@ -1638,7 +1638,7 @@ input[disabled] {
 
 @media (max-width: 479px) {
   #add-banners-modal {
-    width: 200px; } }
+    width: 280px; } }
 
 input[type="checkbox"] {
   display: none; }
