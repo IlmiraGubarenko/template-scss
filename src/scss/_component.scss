@@ -861,6 +861,7 @@
       border-bottom: 1px solid $lightGrey;
 
       .label-group{
+
         & + .label-group {
           margin-left: 0;
         }
@@ -889,6 +890,7 @@
           label{
             text-align: left;
             margin-bottom: 10px;
+            font-size: 14px;
           }
         }
       }
