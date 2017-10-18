@@ -861,12 +861,12 @@
       border-bottom: 1px solid $lightGrey;
 
       .label-group{
-        & + .label-group{
+        & + .label-group {
           margin-left: 0;
+        }
 
-          label{
-            font-size: 14px;
-          }
+        label{
+          font-size: 14px;
         }
       }
 
@@ -875,12 +875,20 @@
         display: inline-block;
 
         .form-control {
-          width: 135px;
+          width: 100%;
         }
 
         .label-group {
+          display: block;
+          margin-bottom: $defaultIndent;
+
           & + .label-group {
             margin-top: 10px;
+          }
+
+          label{
+            text-align: left;
+            margin-bottom: 10px;
           }
         }
       }

@@ -1408,15 +1408,21 @@ black-bg {
     border-bottom: 1px solid #e3e3e3; }
     .panel .panel-form .label-group + .label-group {
       margin-left: 0; }
-      .panel .panel-form .label-group + .label-group label {
-        font-size: 14px; }
+    .panel .panel-form .label-group label {
+      font-size: 14px; }
     .panel .panel-form form {
       width: 232px;
       display: inline-block; }
       .panel .panel-form form .form-control {
-        width: 135px; }
-      .panel .panel-form form .label-group + .label-group {
-        margin-top: 10px; }
+        width: 100%; }
+      .panel .panel-form form .label-group {
+        display: block;
+        margin-bottom: 18px; }
+        .panel .panel-form form .label-group + .label-group {
+          margin-top: 10px; }
+        .panel .panel-form form .label-group label {
+          text-align: left;
+          margin-bottom: 10px; }
   .panel .panel-label-group {
     padding-right: 5px;
     padding-left: 5px; } }
